@@ -1,0 +1,23 @@
+{
+  "name": "pbryemply",
+  "version": "1.0.0",
+  "description": "Registraion",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YMArjunBabu/pbryEmply.git"
+  },
+  "author": "arjunBabu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YMArjunBabu/pbryEmply/issues"
+  },
+  "homepage": "https://github.com/YMArjunBabu/pbryEmply#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
