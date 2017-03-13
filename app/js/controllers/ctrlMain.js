@@ -17,7 +17,7 @@ function mainCtrl($scope,$http){
   };
   $scope.getList();
   $scope.regs = function(){
-    if($scope.objSignUp.firstname == "" || $scope.objSignUp.lastname == ""){
+    if($scope.objSignUp.firstname.length == 0 || $scope.objSignUp.lastname.length == 0){
        alert("Please fill the fields");
     }else{
          $http({
