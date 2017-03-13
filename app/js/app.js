@@ -11,7 +11,7 @@
 var regApp = angular
   .module('regApp', ['ui.router']);
   regApp.config(function ($stateProvider,$urlRouterProvider) {
-    $urlRouterProvider.otherwise('main');
+   $urlRouterProvider.otherwise('main');
     $stateProvider
       .state('main', {
         url:'/main',
