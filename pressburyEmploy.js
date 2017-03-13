@@ -27,7 +27,17 @@ app.get('/',function(req,res){
 });
 app.post('/reg',urlEncodedParser,function(request,response){
   client.query("INSERT INTO empinfo(firstname, lastname) values($1, $2)", [request.body.firstname, request.body.lastname]);
-  response.send("Inserted");
+   query = client.query("SELECT firstname, lastname FROM empinfo ORDER BY lastname, firstname");
+   query.on("row", function (row, result) {
+      result.addRow(row);
+  });
+  query.on("end", function (result) {
+      aryRec = [];
+       aryRec = JSON.stringify(result.rows, null, "    ");
+      console.log(JSON.stringify(result.rows, null, "    "));
+         // client.end();
+    response.send(aryRec);
+  });
 
 });
 app.get('/details',function(request,response){

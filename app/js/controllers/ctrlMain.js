@@ -15,6 +15,7 @@ function mainCtrl($scope,$http){
       console.log(response,"error");
     });
   };
+  $scope.getList();
   $scope.regs = function(){
     if($scope.objSignUp.firstname == "" || $scope.objSignUp.lastname == ""){
        alert("Please fill the fields");
@@ -26,7 +27,7 @@ function mainCtrl($scope,$http){
       }).then(function successCallback(response) {
         console.log(response,"post");
         $scope.objSignUp = {};
-  //       $scope.aryList = response.data;
+        $scope.aryList = response.data;
       }, function errorCallback(response) {
         console.log(response,"error");
       });
