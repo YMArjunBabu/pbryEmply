@@ -7,7 +7,7 @@ function mainCtrl($scope,$http){
   $scope.getList = function(){
     $http({
       method:"GET",
-      url:"http://localhost:5678/details"
+      url:"http://192.168.10.108:5678/details"
     }).then(function successCallback(response) {
       console.log(response);
       $scope.aryList = response.data;
@@ -18,7 +18,7 @@ function mainCtrl($scope,$http){
   $scope.regs = function(){
     $http({
       method:"POST",
-      url:"http://localhost:5678/reg",
+      url:"http://192.168.10.108:5678/reg",
       data : $scope.objSignUp
     }).then(function successCallback(response) {
       console.log(response,"post");
