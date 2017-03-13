@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 // postgress
 var pg = require("pg");
-var conString = "pg://postgres:post@localhost:5432/empy";
+var conString = "pg://postgres:post@local:5432/empy";
 var client = new pg.Client(conString);
  client.connect();
 
